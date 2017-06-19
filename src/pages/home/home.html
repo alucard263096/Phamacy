@@ -1,18 +1,31 @@
-<ion-header>
+﻿<ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>药房好帮手</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content >
+  <div class="banner-part" style="height:40%">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-slides pager>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+      <ion-slide class="banner" *ngFor="let item of banners" [style.background-image]="'url('+UploadPath+'banner'+'/'+item.pic+')'" >
+      </ion-slide>
+
+
+    </ion-slides>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+
+      </ion-col>
+      <ion-col col-3>
+        ...敬请期待
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
