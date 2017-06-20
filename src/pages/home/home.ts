@@ -2,6 +2,7 @@
 import { NavController } from 'ionic-angular';
 import { AbstractPage } from "../../app/page.abstract";
 import { BannerDao } from "../../providers/banner.dao";
+import { HarbalDao } from "../../providers/harbal.dao";
 
 @Component({
     selector: 'page-home',
@@ -9,7 +10,7 @@ import { BannerDao } from "../../providers/banner.dao";
 })
 export class HomePage extends AbstractPage {
     banners = [];
-    constructor(public navCtrl: NavController, public bannerDao: BannerDao) {
+    constructor(public navCtrl: NavController, public bannerDao: BannerDao, public harbalDao: HarbalDao) {
         super();
     }
 
@@ -18,6 +19,10 @@ export class HomePage extends AbstractPage {
             .then((data) => {
                 this.banners = data;
             });
+        this.harbalDao.sync({},false);
+    }
+    gotoNameChecking() {
+        this.navCtrl.push("HerbalFindPage");
     }
 
 }

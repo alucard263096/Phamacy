@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { BannerDao } from "../providers/banner.dao";
+import { HarbalDao } from "../providers/harbal.dao";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { BannerDao } from "../providers/banner.dao";
   imports: [
       HttpModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+        tabsPlacement: 'top',
+        backButtonText: '返回'
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,6 +36,7 @@ import { BannerDao } from "../providers/banner.dao";
   ],
   providers: [
       SQLite,
+      HarbalDao,
       BannerDao,
     StatusBar,
     SplashScreen,

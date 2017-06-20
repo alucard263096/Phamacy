@@ -5,4 +5,22 @@
   .banner{
     background-size:cover;
   }
+  .tooltable{
+      width:100%;
+  } 
+  .tooltable tr{
+      height:10rem;
+  } 
+  .tooltable .tooltd{
+      width:25%;
+      border-right:1px solid #dddddd;
+      border-bottom:1px solid #dddddd;
+      border-left:1px solid #dddddd;
+      border-top:1px solid #dddddd;
+      text-align:center;
+  } 
+  .tooltd ion-icon{
+      font-size:xx-large;
+      margin-bottom:10px;
+  }
 }

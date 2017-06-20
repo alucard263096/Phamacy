@@ -18,14 +18,22 @@
 
     </ion-slides>
   </div>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-3>
-
-      </ion-col>
-      <ion-col col-3>
-        ...敬请期待
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+    <ion-scroll scrollY="true" style="height:60%">
+        <table class="tooltable" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="tooltd" (click)="gotoNameChecking()">
+                    <ion-icon name="search" color="primary"></ion-icon>
+                    <br />
+                    查药材
+                </td>
+                <td class="tooltd">
+                    <ion-icon name="more"></ion-icon>
+                    <br />
+                    敬请期待
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </ion-scroll>
 </ion-content>
