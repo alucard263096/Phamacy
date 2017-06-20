@@ -24,8 +24,14 @@ import { HarbalDao } from "../providers/harbal.dao";
       HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp, {
-        tabsPlacement: 'top',
-        backButtonText: '返回'
+        backButtonText: '',
+        iconMode: 'ios',
+        modalEnter: 'modal-slide-in',
+        modalLeave: 'modal-slide-out',
+        tabsPlacement: 'bottom',
+        pageTransition: 'ios',
+        backButtonIcon: "ios-arrow-back",
+        statusbarPadding: false
     }),
   ],
   bootstrap: [IonicApp],

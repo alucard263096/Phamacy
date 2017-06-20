@@ -1,8 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+﻿import { Component, ViewChild } from '@angular/core';
+import { Nav, Platform,LoadingController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { ApiConfig } from './api.config';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
@@ -16,8 +17,11 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen
+      , public loadCtrl: LoadingController) {
+
+      ApiConfig.SetLoadingCtrl(loadCtrl);
+      this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [

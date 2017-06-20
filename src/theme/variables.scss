@@ -45,6 +45,8 @@ $colors: (
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+$loading-ios-background: transparent;
+$loading-ios-spinner-ios-color: #fff;
 
 
 
@@ -52,6 +54,11 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$toast-md-background: rgba(0, 0, 0, .9);
+$loading-md-background: transparent;
+$loading-md-spinner-ios-color: #fff;
+$loading-md-box-shadow-color: none;
+$loading-md-box-shadow: none;
 
 
 
