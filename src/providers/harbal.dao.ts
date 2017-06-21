@@ -104,5 +104,22 @@ export class HarbalDao extends AbstractDao {
     }
 
 
+    //获取药材详情, 传入对应的id
+    public get(id, showLoadingModel: boolean = true) {
+        let api: HarbalApi = new HarbalApi(this.http);
+        return api.get(id, showLoadingModel).then(data => {
+            
+            var lst = Array();
+            lst.push(data);
+            this.batchUpdate(lst);
+
+            return data;
+
+        }).catch(e => {
+            return this.getOne(id);
+        });
+    }
+
+
 
 }
